@@ -51,6 +51,7 @@ const StudentPage = () => {
         <Header />
       </div>
 
+    <h1>student section design</h1>
       <h1>{id}</h1>
       <h1>{student.name}</h1>
       <h1>{student.rollno}</h1>
