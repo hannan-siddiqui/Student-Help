@@ -56,7 +56,7 @@ const Login = () => {
            }).then(() => {
 
             const {uid, email, displayName} = auth.currentUser;
-
+// adding user 
           dispatch(addUser(
             
             {
@@ -117,12 +117,12 @@ const Login = () => {
 
   return (
 
-    <div  className="h-screen bg-black" >
+    <div  className="h-screen bg-blue-400" >
       <Header/>
 
       <form 
        onSubmit={(e)=>{e.preventDefault()}}
-       className=" z-10 absolute w-[80%] mt-[25%] pt-[30%] md:pt-[5%] md:mt-[12%] md:w-3/12 p-10 text-white bg-red-500 bg-opacity-70 md:my-20 my-24 mx-auto right-0 left-0">
+       className=" z-10 absolute w-[80%] mt-[25%] pt-[30%] md:pt-[5%] md:mt-[12%] md:w-3/12 p-10 text-white bg-red-500 bg-opacity-70 md:my-20 my-24 mx-auto right-0 left-0 rounded-xl">
 
         <h1 className="font-bold text-3xl py-4 ">{signform?"Sign In" : "Sign Up"}</h1>
 
@@ -152,7 +152,7 @@ const Login = () => {
         
         <p className="py-4 px-4 cursor-pointer font-bold" 
         onClick={toggleSignInForm}>
-        {signform?"new to netflix? sign up" : "Already member? sign in "}
+        {signform?"new to Student-help? sign up" : "Already member? sign in "}
         </p>
 
       </form>

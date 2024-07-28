@@ -5,6 +5,8 @@ const Substepsstep = (props) => {
 
   if (!data) return;
 
+
+
   return (
     <div>
       <div>
@@ -17,16 +19,39 @@ const Substepsstep = (props) => {
 
                   <div className="border border-neutral-700 rounded-lg p-2 mt-10 text-sm font-semibold text-white ">
                     <div className="flex items-center justify-start px-4">
-                      <div className="flex justify-start items-center w-[40%] mr-10 ">PROBLEM</div>
-                      <div className="flex justify-center items-center w-[12%] mr-5 ">CODE STUDIO</div>
-                      <div className="flex justify-center items-center w-[12%] mr-5 ">LEETCODE</div>
-                      <div className="flex justify-center items-center w-[12%] mr-5 " >YOUTUBE</div>
-                      <div className="flex justify-center items-center w-[12%] mr-5" >DIFFICULTY</div>
+                      <div className=" flex justify-start items-center w-[40%] mr-8 ">
+                        PROBLEM
+                      </div>
+                      <div className="flex justify-center items-center w-[12%] mr-5 ">
+                        CODE STUDIO
+                      </div>
+                      <div className="flex justify-center items-center w-[12%] mr-5 ">
+                        LEETCODE
+                      </div>
+                      <div className="flex justify-center items-center w-[12%] mr-5 ">
+                        YOUTUBE
+                      </div>
+                      <div className="flex justify-center items-center w-[12%] mr-5">
+                        DIFFICULTY
+                      </div>
                     </div>
 
-                    {data.map((q) => (
-                      <Questions key={data.id} data={q} />
-                    ))}
+                    <div>
+                      <div>
+
+                       
+                        <div> {data.map((q) => (
+                          <div key={q?.id} >
+                            <div></div>
+                            <div><Questions key={q?.id} data={q} /></div>
+                          </div>
+
+                        
+                      ))}</div>
+
+                      </div>
+                     
+                    </div>
                   </div>
                 }
               </div>

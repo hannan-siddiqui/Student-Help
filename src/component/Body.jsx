@@ -7,6 +7,8 @@ import Steps from "./Steps";
 import Profile from "./Profile";
 import Footer from "./Footer";
 import StudentPage from "./StudentPage";
+import Job from "./Job";
+import JobPage from "./JobPage";
 
 
 const Body = () => {
@@ -25,6 +27,11 @@ const Body = () => {
             errorElement:<Error/>,
         },
         {
+          path:"/job",
+          element:<Job/>,
+          errorElement:<Error/>,
+      },
+        {
           path:"/login",
           element:<Login/>,
           errorElement:<Error/>,
@@ -42,6 +49,11 @@ const Body = () => {
         {
           path:"/studentpage/:id",
           element:<StudentPage/>,
+          errorElement:<Error/>
+        },
+        {
+          path:"/jobpage/:id",
+          element:<JobPage/>,
           errorElement:<Error/>
         }
 

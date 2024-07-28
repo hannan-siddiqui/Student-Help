@@ -20,7 +20,7 @@ const Header = () => {
       .then(() => {
         removeUser();
         dispatch(removeUser())
-        // navigate("/")
+        navigate("/")
       })
       .catch((error) => {
         // An error happened.
@@ -69,35 +69,40 @@ const Header = () => {
         <h1 className="text-3xl font-extrabold text-gray-950">Student-Help</h1>
       </div>
 
-      <div className="">
+      <div className="font-mono">
         <ul className="flex justify-center items-center h-20 text-2xl font-bold">
-          <li className="mx-10">
-            <Link to="/"> Home </Link>{" "}
+          <li className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
+            <Link to="/"> Home </Link>
           </li>
-          <li className="mx-10">
-            <Link to="/student"> Student </Link>{" "}
+          <li className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
+            <Link to="/student"> Student </Link>
+          </li>
+          <li className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
+            <Link to="/job"> Job </Link>
           </li>
          
           {
             !user &&
-            <li className="mx-10">
-            <Link to="/login"> login </Link>{" "}
+            <li className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
+            <Link to="/login"> Login </Link>
           </li>
           }
+          
          {
           user && 
-           <li className="mx-10">
-           <Link to="/profile"> profile </Link>{" "}
+           <li className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
+           <Link to="/profile"> Profile </Link>
          </li>
          }
+
 
           {
             user && 
 
             <li
-           className="mx-10">
+           className="mx-10 bg-red-700 p-1 rounded-xl hover:text-red-300 px-2 border-[2px] border-black">
             <button onClick={handleSignOut}>
-              sign out
+              Sign Out
             </button>
           </li>
           }

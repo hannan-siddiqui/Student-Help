@@ -21,10 +21,10 @@ const Steps = () => {
 
        
 
-        <div className="  bg-[#151111]">
+        <div className="   bg-[#151111]">
           
 
-          <div className="w-[80%] mt-[4%] ">
+          <div className="w-[100%] mt-[4%] ">
             <div className=" ">
              
 
@@ -34,8 +34,9 @@ const Steps = () => {
 
              { 
              
-             data.map((st)=>(
-              <Step key={st?.step_no}  data={st} />
+             data.map((st, index)=>(
+              <Step key={index
+              }  data={st} />
              ))
               
             }

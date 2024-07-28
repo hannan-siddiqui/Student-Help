@@ -23,10 +23,10 @@ const Step = (props) => {
     
     
     return (
-      <div className="bg-[#151111] ">
+      <div className="bg-[#151111]  ">
         {/* DSA accordian  */}
 
-        <div className=" bg-[#151111]  flex flex-col justify-center items-center w-screen">
+        <div className=" bg-[#151111] flex flex-col justify-center items-center   ">
           <div className="w-[80%]  flex  justify-start items-center bg-[#151111] ">
             <div className="  w-[77%] rounded-lg bg-[#FF6647] h-[10px] "></div>
           </div>
@@ -55,14 +55,14 @@ const Step = (props) => {
                   <div className="">
                     
                       
-                      {
-                        sub_steps.map((sub)=>
-                            <SubSteps
-                                key={sub.topics?.id}
-                                data={sub}
-                            />
-                        )
-                      }
+                    {
+  sub_steps.map((sub, index) => (
+    <SubSteps
+      key={index}
+      data={sub}
+    />
+  ))
+}
                    
                   </div>
                 )}
